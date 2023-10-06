@@ -1,0 +1,104 @@
+<div class="home-wrapper">
+  <div class="home-top-img position-relative">
+    <div class="position-absolute home-top-title">
+      <h1 class="text-dark">March into Spring!</h1>
+      <p class="text-dark">Bring the meadow to them with a daisy bouquet.</p>
+      <button type="button" class="btn btn-secondary">SHOP FLOWERS</button>
+    </div>
+
+  </div>
+  <div class="container pt-5">
+    <div class="row">
+      <div class="col-12">
+        <p class="text-dark">Established in 1910 FTD has been a premier provider of beautiful floral arrangements and
+          gorgeous mixed flower bouquets for over 100 years. Whatever the occasion, our evergreen collection of colorful
+          stems, bloosoming plants, and fragrant arrangements have warmed hearts all across the country with our flower
+          delivery services. At FTD, we celebrate the little things in life and cherish the timeless charm a single
+          flower embodies. From birthday flowers to sympathy flowers, all of our hand-picked flower arrangements are
+          worth more than a thousand words.</p>
+        <br>
+        <p class="text-dark"> Our sprawling network of florists is chock-full of expert green thumbs with an eye for
+          elegance and perfection. As one of the largest and most trusted online floral retailers in the world, we take
+          immense pride in our industry-leading title. Delivering quality, innovation, creative artistry, and
+          dependability, FTD is much more then just an online flower delivery service.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-3 col-md-6 mt-2" *ngFor="let img of images; let i = index">
+        <div class="text-center">
+          <img [src]="img.path" class="img-fluid" alt="Image {{i + 1}}">
+          <p class="mt-2">{{ img.text }}</p>
+          <p class="mb-0">{{ img.price }}</p>
+        </div>
+      </div>
+      <div class="col-lg-12 mt-2 text-center">
+        <button class="btn btn-light" routerLink="/shop">Load More</button>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid pt-5">
+    <div class="row">
+      <div class="col-lg-6 col-md-12">
+        <p>Send us a message</p>
+        <p>A: Laze Nančića 7, 21000 Novi Sad</p><br>
+        <p>T: 021/422-022</p><br>
+        <p> office@smartinit.net</p><br>
+        <p>MON-FRI: 7am - 10pm</p>
+        <p>SATURDAY: 8am - 10pm</p>
+        <p>SUNDAY: -</p><br>
+        <p>FAQ /</p><br>
+        <p>Shipping & Returns /</p>
+        <p>Store Policy /</p>
+        <p>Payment Methods /</p>
+      </div>
+      <div class="col-lg-6 col-md-12">
+        <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control custom-input" id="name" name="name" required>
+            </div>
+            <div class="col-md-6">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control custom-input" id="email" name="email" required>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="subject" class="form-label">Subject</label>
+            <input type="text" class="form-control custom-input" id="subject" name="subject" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control custom-input" id="message" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-light d-block mx-auto">Send</button>
+        </form>
+        <p class="mt-3">Get our newsletters</p>
+        <div class="input-group">
+          <input type="email" class="form-control" placeholder="Enter your email">
+          <div class="input-group-append mx-4">
+            <button class="btn btn-dark">Subscribe Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-6 col-md-12 p-0">
+          <div class="bottom-part-1 text-light ">
+            <h1>Send Get Well Wishes</h1>
+            <p>Brighten their recovery with beautiful florals, plants and gifts that will express your well wishes.</p>
+            <button type="button" class="btn btn-secondary">SHOP GET WELL FLOWERS & GIFTS</button>
+          </div>
+        </div>
+        <div class="col-lg-6 p-0">
+          <div class="bottom-part-2"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

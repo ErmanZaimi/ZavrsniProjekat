@@ -1,0 +1,39 @@
+<div *ngIf="cartItems.length > 0; else emptyCart">
+  <div *ngFor="let item of cartItems; let i = index; let last = last">
+  <div class="row">
+    <div class="col-md-2"><img [src]="item.productImgSrc" alt="{{ item.productName }}" height="50"></div>
+    <div class="col-md-2">{{ item.productName }}</div>
+    <div class="col-md-2">{{ item.productPrice }}</div>
+    <div class="col-md-2">{{ item.quantity }}</div>
+    <div class="col-md-2">{{ item.totalPrice }}</div>
+    <div class="col-md-2"><button class="btn btn-white" (click)="removeFromCart(item)">Remove</button></div>
+  </div>
+  <hr *ngIf="!last && cartItems[i + 1]?.productId !== item.productId">
+</div>
+
+
+<div class="text-right">
+  <hr>
+  <div class="row">
+    <div class="col-md-8 text-right">Subtotal:</div>
+    <div class="col-md-4">{{ calculateSubtotal() }}</div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 text-right">Shipping:</div>
+    <div class="col-md-4">FREE$</div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-8 text-right">Total:</div>
+    <div class="col-md-4">{{ calculateTotal() }}</div>
+  </div>
+  <button class="btn btn-dark" (click)="checkout()">Checkout</button>
+</div>
+</div>
+<ng-template #emptyCart>
+  <div class="text-center">
+    <h1>Shopping cart is empty!</h1>
+  </div>
+</ng-template>
+
+

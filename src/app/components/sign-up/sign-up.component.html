@@ -1,0 +1,52 @@
+<div class="signup-wrapper">
+    <div class="signup-img position-relative">
+        <div class="position-absolute signup-title">
+            <h1 class="text-dark">Sign Up</h1>
+            <form (ngSubmit)="onSignup()" #signupForm="ngForm">
+                <div class="form-group">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName"
+                        [(ngModel)]="signupModel.firstName" required minlength="5" #firstNameField="ngModel" />
+                    <div *ngIf="firstNameField.invalid && (firstNameField.dirty || firstNameField.touched)"
+                        class="text-danger">
+                        First Name is required.
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName"
+                        [(ngModel)]="signupModel.lastName" required minlength="5" #lastNameField="ngModel" />
+                    <div *ngIf="lastNameField.invalid && (lastNameField.dirty || lastNameField.touched)"
+                        class="text-danger">
+                        Last Name is required.
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" [(ngModel)]="signupModel.email"
+                        required email #emailField="ngModel" />
+                    <div *ngIf="emailField.invalid && (emailField.dirty || emailField.touched)" class="text-danger">
+                        Email is required.
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" class="form-control" id="password" name="password"
+                        [(ngModel)]="signupModel.password" required minlength="5" #passwordField="ngModel" />
+                    <div *ngIf="passwordField.invalid && (passwordField.dirty || passwordField.touched)"
+                        class="text-danger">
+                        Password is required.
+                    </div>
+                </div>
+                <p>Forggot password?</p>
+                <button type="submit" class="btn btn-secondary" [disabled]="!signupForm.valid">
+                    Sign Up
+                </button>
+                <p class="text-dark" [routerLink]="['/login']">Already a member? Log In</p>
+            </form>
+        </div>
+    </div>
+</div>

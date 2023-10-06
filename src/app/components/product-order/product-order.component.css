@@ -1,0 +1,13 @@
+.required-asterisk::after {
+    content: " *";
+    color: red;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea,
+  select {
+    border: none;
+    border-radius: 0; 
+    border-bottom: 1px solid #ccc; 
+  }  

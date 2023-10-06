@@ -1,0 +1,8 @@
+.footer-wrapper{
+    height: 25px;
+    background-color: aliceblue;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+}

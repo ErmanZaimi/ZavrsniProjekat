@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 mt-5 category-item" *ngFor="let category of getCategories()">
+      <a (click)="selectCategory(category)">
+        <h3 class="text-center">{{ category.name }}</h3>
+        <img [src]="category.imgSrc" class="images" />
+      </a>
+    </div>
+  </div>
+</div>
+<div class="container mt-3">
+  <div class="row">
+    <div class="col">
+      <div *ngIf="selectedCategory" class="product-container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let product of getProductsByCategory(selectedCategory.id)">
+            <a class="router-link" [routerLink]="['/shop/product', product.name]">
+              <img [src]="product.imgSrc" class="product-img" />
+              <h3 class="text-center">{{ product.name }}</h3>
+              <p class="text-center">{{ product.price }}</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

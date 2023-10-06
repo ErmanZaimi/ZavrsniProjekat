@@ -1,0 +1,18 @@
+.logo{
+    width: 100px;
+}
+.nav-link {
+    position: relative;
+  }
+  
+  .cart-item-count {
+    position: absolute;
+    top: -4px; 
+    right: -4px; 
+    background-color: gray;
+    color: white;
+    border-radius: 80%;
+    padding: 2px 4px;
+    font-size: 10px;
+  }
+  

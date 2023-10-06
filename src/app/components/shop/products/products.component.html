@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-6 order-lg-1">
+      <img [src]="singleProduct?.imgSrc" alt="{{ singleProduct?.name }}"
+        class="product-image img-fluid img-thumbnail pr-1" />
+    </div>
+    <div class="col-lg-6 order-lg-2">
+      <h1 class="product-name">{{ singleProduct?.name }}</h1>
+      <p class="product-price">{{ singleProduct?.price }}</p>
+      <p class="product-description">{{ singleProduct?.description }}</p>
+      <div class="form-group p-3">
+        <label for="quantity">Quantity:</label>
+        <input [value]="quantity" (input)="updateQuantity($event)" type="number" id="quantity" name="quantity"
+          class="form-control" min="0" max="999" required>
+      </div>
+      <button type="button" class="btn btn-dark btn-block" (click)="addProductToCart()">Add to Cart</button>
+    </div>
+  </div>
+</div>

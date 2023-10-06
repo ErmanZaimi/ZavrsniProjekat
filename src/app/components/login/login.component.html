@@ -1,0 +1,35 @@
+<div class="login-wrapper">
+    <div class="login-img position-relative">
+        <div class="position-absolute login-title">
+            <h1 class="text-dark">Log In</h1>
+            <p class="text-dark" [routerLink]="['/signup']">New to this site? Sign Up</p>
+            <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" [(ngModel)]="loginModel.email"
+                        required email #emailField="ngModel" />
+                    <span *ngIf="emailField.invalid && (emailField.dirty || emailField.touched)" class="text-danger">
+                        Email is required
+                    </span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" class="form-control" id="password" name="password"
+                        [(ngModel)]="loginModel.password" required minlength="5" #passwordField="ngModel" />
+                    <span *ngIf="passwordField.invalid && (passwordField.dirty || passwordField.touched)"
+                        class="text-danger">
+                        Password is required
+                    </span>
+                </div>
+                <br>
+                <br>
+
+                <p>Forgot password?</p>
+                <button type="submit" class="btn btn-secondary btn-block" [disabled]="!loginForm.valid">
+                    Log In
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

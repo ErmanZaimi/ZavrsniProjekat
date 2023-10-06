@@ -1,0 +1,16 @@
+.about-top-img{
+    background-image: url('/assets/images/aboutCover.jpg');
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+}
+.about-top-title{
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.border {
+    border-radius: 10px; 
+  }

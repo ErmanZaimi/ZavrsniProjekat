@@ -1,0 +1,8 @@
+.social-sidebar {
+    position: fixed;
+    top: 50%;
+    width: 40px;
+    right: 0;
+    text-align: center;
+    background-color: white;
+}

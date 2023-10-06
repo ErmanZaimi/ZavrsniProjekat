@@ -1,0 +1,15 @@
+.signup-img {
+    background-image: url('/assets/images/Resursi/login.bg.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.input.ng-invalid.ng-touched{
+    border: 5px solid color(red);
+}
+span{
+    color: red;
+}

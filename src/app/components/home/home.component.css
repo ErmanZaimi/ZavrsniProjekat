@@ -1,0 +1,33 @@
+.home-top-img{
+    background-image: url('/assets/images/Resursi/bg1.jpg');
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+}
+.home-top-title{
+    top: 30%;
+    right: 0;
+}
+.custom-input {
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius: 0;
+    box-shadow: none;
+  }
+.home-wrapper{
+    padding: 35px;
+}
+.bottom-part-1,
+.bottom-part-2 {
+    height: 500px;
+}
+.bottom-part-2{
+    background-image: url('/assets/images/Resursi/bottom.png');
+    background-size: cover;
+    background-position: center;
+}
+.bottom-part-1{
+    text-align: center;
+    padding: 20%;
+    background-color: #f386bae3;
+}
